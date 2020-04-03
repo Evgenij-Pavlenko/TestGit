@@ -8,11 +8,9 @@ public class Recursion {
     }
 
     public static void recursion(int n) {
-        int temp = n;
-        while (n > 1) {
+        if (n>1){
             System.out.print(n + ", ");
-            n -= 2;
-        }
-        System.out.println(n % 2 == 0 ? "0" : "1");
+            recursion(n-2);
+        } else System.out.print(n % 2 == 0 ? "0" : "1");
     }
 }
