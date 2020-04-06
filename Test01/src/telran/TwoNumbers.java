@@ -6,18 +6,18 @@ public class TwoNumbers {
     }
 
     public static void twoNumbers(int a, int b) {
-        String str = ""; // можно этот String и  возвращать, если метод не void, а String
         if (a == b) {
-            str += a + ", ";
+            System.out.print(a);
         } else if (a > b) {
-            for (int i = a; i >= b; i--) {
-                str += i + ", ";
+            for (int i = a; i > b; i--) {
+                System.out.print(i + ", ");
             }
+            System.out.println(b);
         } else {
-            for (int i = a; i <= b; i++) {
-                str += i + ", ";
+            for (int i = a; i < b; i++) {
+                System.out.print(i + ", ");
             }
+            System.out.println(b);
         }
-        System.out.println(str.substring(0, str.length() - 2));
     }
 }
